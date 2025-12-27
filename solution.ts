@@ -65,12 +65,11 @@ interface Book {
 
 function printBookDetails(book: Book): void {
   const availability = book.isAvailable ? "Yes" : "No";
-  console.log(`Title: ${book.title},
-            Author: ${book.author},
-            Publish: ${book.publishedYear},
-            Available: ${book.isAvailable}
-        `);
+  console.log(
+    `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`
+  );
 }
+
 
 function getUniqueValues<T extends string | number>(arr1: T[], arr2: T[]): T[] {
   const result: T[] = [];
@@ -133,4 +132,5 @@ function calculateTotalPrice(products: Product[]): number {
     })
     .reduce((sum, current) => sum + current, 0);
 }
+
 
